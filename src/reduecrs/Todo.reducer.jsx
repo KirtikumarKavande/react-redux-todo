@@ -15,6 +15,16 @@ const Todo = (state = todo, action) => {
   } else if (action.type === Remove_TODO) {
     return state.filter((item) => item.id !== action.id);
   } else if (action.type === EDIT_TODO) {
+    console.log("logged 2",action.payload.id)
+    return state.map((item)=>{
+        if(item.id===action.payload.id)
+        {
+            return {id:action.payload.id,name:action.payload.name}
+        }
+        else{
+            return item
+        }
+    })
   }
   return state;
 };
