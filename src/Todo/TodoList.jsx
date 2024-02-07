@@ -21,7 +21,7 @@ const TodoList = () => {
       />
       <button onClick={addNewTodo}>ADD TODO</button>
       {allTodo.map((item) => (
-        <Todo name={item.name} key={item.id} />
+        <Todo name={item.name} key={item.id} id={item.id} />
       ))}
     </div>
   );
