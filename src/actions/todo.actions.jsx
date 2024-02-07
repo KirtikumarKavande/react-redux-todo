@@ -1,8 +1,8 @@
 import { ADD_TODO } from "../constant";
 
-export const addToAction = (todo) => {
+export const addTodoAction = (todo) => {
   return {
     type: ADD_TODO,
-    payload: { name: todo },
+    payload: { name: todo,id: Math.floor(Math.random() * 10) },
   };
 };
